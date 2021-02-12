@@ -1,0 +1,69 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "cleaner",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "watch": "nodemoon --exec electron .",
+    "rm": "node src/fsFile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinaDakiri12/Application-Ultimate-PC-Cleaner.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "Mina dakiri, Achraf abbassi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MinaDakiri12/Application-Ultimate-PC-Cleaner/issues"
+  },
+  "homepage": "https://github.com/MinaDakiri12/Application-Ultimate-PC-Cleaner#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "^11.2.2",
+    "electron-reloader": "^1.2.0"
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "get-folder-size": "^2.0.1",
+    "nodemon": "^2.0.7",
+    "shelljs": "^0.8.4"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

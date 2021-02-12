@@ -1,0 +1,325 @@
+body{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    background-color: #e27f23;
+
+}
+.sidebar .logo{
+    background-color: #e27f23;
+    padding: 2rem 0rem;
+}
+.sidebar .logo img{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sidebar .logo h1{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.sidebar ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.sidebar ul li{
+    background-color:#e27f23;
+    color: white;
+    border: 1px solid #f5ece4;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+.sidebar ul li i{
+    margin-right: 16px;
+}
+
+.sidebar ul li:hover{
+    background-color: #e27f23;
+    border: 1px solid #e27f23;
+}
+
+.sidebar-bottom button{
+    display: block;
+    padding: 1rem 4rem;
+    margin: 3rem auto 2.3rem;
+    background-color:#e27f23;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+.sidebar-bottom button:hover{
+    background-color:#e27f23;
+}
+
+
+
+.head{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.left{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: #e27f23;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 4.75rem;
+    height: 30px;
+}
+.left h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.left button{
+    width: 64%;
+    display: block;
+    margin-left: auto;
+
+    border: 3px solid white;
+    background-color: transparent;
+    padding: 0rem 1rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.left button:hover{
+    background-color: #e27f23;
+    border: 3px solid #e27f23;
+}
+
+.functionalities{
+    width: 88%;
+    height: 120px;
+    margin: auto;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 1%;
+
+}
+
+.functionalities button{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    transition: linear 0.2s;
+    grid-column: 2/3;
+    cursor: pointer;
+    border: none;
+    background-color: #e27f23;
+    padding: 4rem 0.5rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: linear 0.2s;
+}
+
+.functionalities button i{
+    margin-bottom: 24px;
+    font-size: 32px;
+    display: block;
+    transition: linear 0.2s;
+}
+
+.functionalities button:hover{
+    background-color: #e27f23;
+
+}
+#btn2{
+  color: #e27f23;
+  background: transparent;
+  border: none;
+  padding: 0px;
+}
+
+#btn2 i{
+  display: inline;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+
+#txt {
+    margin-bottom: 2%;
+    font-weight: 400;
+  }
+  #myProgress {
+    background-color: none;
+    display: none;
+    text-align: center;
+    grid-column: 1/4;
+    width: 100%;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #4caf50;
+  }
+
+
+  .success-checkmark {
+    width: 80px;
+    height: 115px;
+    margin: 0 auto;
+  }
+  .success-checkmark .check-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid #4caf50;
+  }
+  .success-checkmark .check-icon::before {
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    transform-origin: 100% 50%;
+    border-radius: 100px 0 0 100px;
+  }
+  .success-checkmark .check-icon::after {
+    top: 0;
+    left: 30px;
+    width: 60px;
+    transform-origin: 0 50%;
+    border-radius: 0 100px 100px 0;
+    animation: rotate-circle 4.25s ease-in;
+  }
+  .success-checkmark .check-icon::before, .success-checkmark .check-icon::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    background: #ffffff;
+    transform: rotate(-45deg);
+  }
+  .success-checkmark .check-icon .icon-line {
+    height: 5px;
+    background-color: #4caf50;
+    display: block;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+  }
+  .success-checkmark .check-icon .icon-line.line-tip {
+    top: 46px;
+    left: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: icon-line-tip 0.75s;
+  }
+  .success-checkmark .check-icon .icon-line.line-long {
+    top: 38px;
+    right: 8px;
+    width: 47px;
+    transform: rotate(-45deg);
+    animation: icon-line-long 0.75s;
+  }
+  .success-checkmark .check-icon .icon-circle {
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: content-box;
+    border: 4px solid rgba(76, 175, 80, 0.5);
+  }
+  .success-checkmark .check-icon .icon-fix {
+    top: 8px;
+    width: 5px;
+    left: 26px;
+    z-index: 1;
+    height: 85px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+  }
+  
+  @keyframes rotate-circle {
+    0% {
+      transform: rotate(-45deg);
+    }
+    5% {
+      transform: rotate(-45deg);
+    }
+    12% {
+      transform: rotate(-405deg);
+    }
+    100% {
+      transform: rotate(-405deg);
+    }
+  }
+  @keyframes icon-line-tip {
+    0% {
+      width: 0;
+      left: 1px;
+      top: 19px;
+    }
+    54% {
+      width: 0;
+      left: 1px;
+      top: 19px;
+    }
+    70% {
+      width: 50px;
+      left: -8px;
+      top: 37px;
+    }
+    84% {
+      width: 17px;
+      left: 21px;
+      top: 48px;
+    }
+    100% {
+      width: 25px;
+      left: 14px;
+      top: 45px;
+    }
+  }
+  @keyframes icon-line-long {
+    0% {
+      width: 0;
+      right: 46px;
+      top: 54px;
+    }
+    65% {
+      width: 0;
+      right: 46px;
+      top: 54px;
+    }
+    84% {
+      width: 55px;
+      right: 0px;
+      top: 35px;
+    }
+    100% {
+      width: 47px;
+      right: 8px;
+      top: 38px;
+    }
+  }
